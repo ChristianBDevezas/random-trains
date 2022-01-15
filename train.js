@@ -3,6 +3,7 @@ const galleryImg = document.querySelector(".train-gallery__image");
 const trainImage = document.querySelector(".train-gallery__image__item");
 const trainCountry = document.querySelector(".train-gallery__image__country");
 const trainName = document.querySelector(".train-gallery__image__name");
+const trainNumber = document.querySelector(".train-gallery__image__number");
 const images = [
     {
         img: 'img/deutsche-bahn-ice.jpg',
@@ -115,10 +116,12 @@ function showImageInfo(randomImages) {
 
     let currentCountry = images[randomImages].country;
     trainCountry.innerHTML = currentCountry;
+
+    trainNumber.textContent = `${randomImages + 1} / ${images.length}`;
 }
 
 showBtn.addEventListener("click", () => {
-    const galleryItems = [galleryImg, trainImage, trainName, trainCountry];
+    const galleryItems = [galleryImg, trainImage, trainName, trainCountry, trainNumber];
     let randomImages = Math.floor(Math.random() * images.length);
     
     galleryItems.forEach((item) => item.classList.add("change"));
