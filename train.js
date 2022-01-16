@@ -121,11 +121,14 @@ function showImageInfo(randomImages) {
 }
 
 showBtn.addEventListener("click", () => {
-    const galleryItems = [galleryImg, trainImage, trainName, trainCountry, trainNumber];
     let randomImages = Math.floor(Math.random() * images.length);
-    
+
+    const galleryItems = [galleryImg, trainImage, trainName, trainCountry, trainNumber];    
     galleryItems.forEach((item) => item.classList.add("change"));
     setTimeout(() => galleryItems.forEach((item) => item.classList.remove("change")), 700);
+
+    trainName.classList.add("overlay");
+    setTimeout(() => trainName.classList.remove("overlay"), 700);
 
     setTimeout(() => showImageInfo(randomImages), 210);
 });

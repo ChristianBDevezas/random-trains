@@ -77,6 +77,21 @@ p.instructions {margin-bottom: 8px;}
     left: 0px;
     border-radius: 0px 7px 0px 0px;    
 }
+.train-gallery__image__name:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    background: rgba(0, 0, 0, 1);
+    border-radius: 0px 7px 0px 0px;
+}
+
+.overlay.train-gallery__image__name:after {animation: move-overlay 1s;}
+@keyframes move-overlay {
+    0% {width: 100%;}
+    100% {width: 0%;}
+}
 
 .train-gallery__image__country {
     top: 0px;
@@ -108,6 +123,7 @@ p.instructions {margin-bottom: 8px;}
 }
 
 .train-gallery__btn:hover {background-color: black;}
+
 .train-gallery__btn:active {transform: scale(.9);}
 
 .train-gallery__btn::before {
@@ -171,6 +187,7 @@ p.instructions {margin-bottom: 8px;}
 @media(max-height: 420px) {
     .train-gallery__image__item {height: calc((33vh + 20vw));}
 }
+
 @media(max-width: 395px) and (min-height: 840px) {
     .train-gallery__image__item {height: calc((25vh + 20vw));}
 }
