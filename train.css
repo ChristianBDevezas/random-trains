@@ -156,23 +156,15 @@ p.instructions {margin-bottom: 8px;}
 }
 
 @media(max-width: 450px) {
-    .train-gallery h4 {font-size: calc(.75rem + .7vw);}
-
     .train-gallery__image__item {height: calc((25vh + 20vw));}
 }
 
 @media(max-width: 395px) {
-    .train-gallery h4 {font-size: calc(.7rem + .6vw);}
-
     .train-gallery__image__item {height: calc((27vh + 20vw));}
 
     .train-gallery__image__name, .train-gallery__image__country {font-size: .9rem;}
 
     .train-gallery__image__number {font-size: .85rem;}
-}
-
-@media(max-width: 330px) {
-    .train-gallery h4 {font-size: calc(.6rem + .6vw);}
 }
 
 /* Height Control */
@@ -181,4 +173,8 @@ p.instructions {margin-bottom: 8px;}
 }
 @media(max-width: 395px) and (min-height: 840px) {
     .train-gallery__image__item {height: calc((25vh + 20vw));}
+}
+
+@media(min-width: 640px) and (max-height: 420px) {
+    .train-gallery__image {max-width: 70%;}
 }
